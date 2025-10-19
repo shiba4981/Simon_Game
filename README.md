@@ -7,7 +7,7 @@ Test your memory and concentration as the game challenges you with an increasing
 
 ## 🎮 Preview
 
-![Simon Game Screenshot]()
+![Simon Game Screenshot](https://raw.githubusercontent.com/shiba4981/Simon_Game/main/demo.png)
 
 ---
 
