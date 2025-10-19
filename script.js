@@ -4,13 +4,26 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-document.addEventListener("keydown", function() {
+const buttonStart = document.getElementById('start-btn')
+
+buttonStart.addEventListener('click', (e)=>{
+
+  // e.preventDefault();
   if (!started) {
+    console.log('started', started)
     document.getElementById("level-title").textContent = "Level " + level;
     nextSequence();
     started = true;
+    buttonStart.style.visibility = "hidden";
   }
-});
+})
+// document.addEventListener("keydown", function() {
+//   if (!started) {
+//     document.getElementById("level-title").textContent = "Level " + level;
+//     nextSequence();
+//     started = true;
+//   }
+// });
 
 document.querySelectorAll(".btn").forEach(btn => {
   btn.addEventListener("click", function() {
@@ -28,7 +41,7 @@ function checkAnswer(currentLevel) {
     }
   } else {
     document.body.classList.add("game-over");
-    document.getElementById("level-title").textContent = "Game Over, Press Any Key to Restart";
+    document.getElementById("level-title").textContent = "Game Over, Press Play again to Restart";
     setTimeout(() => document.body.classList.remove("game-over"), 200);
     startOver();
   }
@@ -57,4 +70,5 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+  buttonStart.style.visibility = "visible";
 }
