@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background-color: #7F8CAA;
+    font-family: 'Arial', sans-serif;
+}
+
+#level-title {
+    color: white;
+    font-size: 2rem;
+    margin: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    border: 10px solid black;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.green {
+    background-color: #00A74A;
+}
+
+.red {
+    background-color: #9F0F17;
+}
+
+.yellow {
+    background-color: #CCA707;
+}
+
+.blue {
+    background-color: #094A8F;
+}
+
+.pressed {
+    box-shadow: 0 0 20px white;
+    opacity: 0.5;
+}
